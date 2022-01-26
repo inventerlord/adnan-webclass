@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lec001</title>
+</head>
+<body>
+
+<input type="number" min="0" id="a" value="0">
+<input type="number" min="0" id="b" value="0">
+<span id="result"></span>
+
+
+    <img id="img" alt="" style="width: 200px;height: 200px">
+
+<input id="fileUpload" type="file" onchange="UI.readURL(this,'img')" style="visibility: hidden;display: none">
+<label for="fileUpload">Upload File</label>
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="UI.js"></script>
+<script type="text/javascript" src="../node_modules/vanilla-tilt/dist/vanilla-tilt.js"></script>
+<script type="text/javascript">
+    VanillaTilt.init(document.querySelector("#img"), {
+        max: 25,
+        speed: 400,
+    });
+
+</script>
+</body>
+</html>
